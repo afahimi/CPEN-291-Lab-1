@@ -118,37 +118,35 @@ class TwentyFortyEight:
         elif move == 'A':
 
             for column in range(4):
-                    temp = 0
-                    for i in range(1, 4):
-                        if self.board[column][temp] == "":
-                            for j in range (temp+1, 4):
-                                if self.board[column][j] != "":
-                                    self.board[column][temp] = self.board[column][j]
-                                    self.board[column][j] = ""
-                                    break
-                        temp +=1
+                temp = 0
+                for i in range(1, 4):
+                    if self.board[column][temp] == "":
+                        for j in range (temp+1, 4):
+                            if self.board[column][j] != "":
+                                self.board[column][temp] = self.board[column][j]
+                                self.board[column][j] = ""
+                                break
+                    temp +=1
 
 
             for column in range(4):
-                    temp =0
-                    for i in range(1, 4):
-                        if (self.board[column][temp] == self.board[column][i] and self.board[column][temp] != ''):
-                                self.board[column][temp] = int(self.board[column][temp])*2
-                                self.board[column][i] = ""
-                                i += 1
-                                temp +=1
 
-                        temp +=1
-
-
-
-
-
-
-                            
-
-
-
+                for i in range(1, 4):
+                    temp = i-1
+                    if (self.board[column][temp] == self.board[column][i] and self.board[column][temp] != ''):
+                        self.board[column][temp] = int(self.board[column][temp])*2
+                        self.board[column][i] = ""
+                        i += 1
+            for column in range(4):
+                temp = 0
+                for i in range(1, 4):
+                    if self.board[column][temp] == "":
+                        for j in range(temp + 1, 4):
+                            if self.board[column][j] != "":
+                                self.board[column][temp] = self.board[column][j]
+                                self.board[column][j] = ""
+                                break
+                    temp += 1
 
 
 
