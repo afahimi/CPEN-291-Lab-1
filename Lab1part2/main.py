@@ -85,9 +85,9 @@ class TwentyFortyEight:
             the move argument is either 'W', 'A', 'S', or 'D'
             directions: W for up; A for left; S for down, and D for right
         """
-        userMove = promptGamerForTheNextMove()
 
-        if userMove == 'W':
+
+        if move == 'W':
             for column in range(len(self.board)):
                 for row in range(len(self.board)):
                     if self.board[column][row] == "":
@@ -115,51 +115,84 @@ class TwentyFortyEight:
 
 
 
-        elif userMove == 'A':
-            temp = 1
+        elif move == 'A':
+
+            for column in range(4):
+                    temp = 0
+                    for i in range(1, 4):
+                        if self.board[column][temp] == "":
+                            for j in range (temp+1, 4):
+                                if self.board[column][j] != "":
+                                    self.board[column][temp] = self.board[column][j]
+                                    self.board[column][j] = ""
+                                    break
+                        temp +=1
+
+
+            for column in range(4):
+                    temp =0
+                    for i in range(1, 4):
+                        if (self.board[column][temp] == self.board[column][i] and self.board[column][temp] != ''):
+                                self.board[column][temp] = int(self.board[column][temp])*2
+                                self.board[column][i] = ""
+                                i += 1
+                                temp +=1
+
+                        temp +=1
+
+
+
+
+
+
+                            
+
+
+
+
+
+
+        elif move == 'D':
+
+            column = 4
+            while column >= 0:
+                column -= 1
+                row = 3
+                while row >= 0:
+                    row -=1
+                    for possible in range(3 , column , -1):
+                        if self.board[row][column] != "":
+                            print(column)
+                            if self.board[row][column] == self.board[row][possible]:
+                                print(possible)
+                                self.board[row][possible] = str(int(self.board[row][possible])*2)
+                                self.board[row][column] = ""
+                                row = 3
+                                column = 3
+                                break
+                            if self.board[row][possible] == "":
+                                self.board[row][possible] = str(int(self.board[row][column]))
+                                self.board[row][column] = ""
+                                row = 3
+                                column = 3
+                                break
+
+        elif move == 'S':
             for column in range(len(self.board)):
                 for row in range(len(self.board)):
-                    temp = column
-                    for i in range(column + 1, len(self.board)):
-                        if self.board[column][row] == "":
-                            if self.board[i][row] != '':
-                                self.board[temp][row] = self.board[i][row]
-                                temp+=1
-                                self.board[i][row] = ''
-                        else:
-                            if (self.board[temp][row] == self.board[i][row]):
-                             self.board[temp][row] *=2
-                             temp+=1
-                             self.board[temp][row] = ''
-
-
-
-
-
-        elif userMove == 'D':
-            combine_flag = False
-
-            for row1 in range(len(self.board)):
-                for column1 in range(len(self.board)):
-                    row = 3-row1
-                    column = 3 - column1
                     if self.board[row][column] != '':
-                        for i in range(len(self.board)):
-                            if self.board[row][len(self.board)-i-1] == self.board[row][column] and self.board[row][column] != '' and len(self.board)-i-1 != column:
-                                print(int(self.board[row][len(self.board)-1-i])* 2)
-                                self.board[row][len(self.board)-i-1] = int(self.board[row][len(self.board)-1-i])* 2
-                                self.board[row][column] = ''
-                                break
-
-                            if self.board[row][len(self.board)-i-1] == '':
+                        if self.board[row][column] == self.board[row + 1][column]:
+                            self.board[row + 1][column] = int(self.board[row+1][column]) * 2
+                            self.board[row][column] = ''
+                            break
+                        for i in range(row + 1, len(self.board)):
+                            if self.board[i][column] == '':
                                 number = self.board[row][column]
                                 self.board[row][column] = ''
-                                self.board[row][len(self.board)-i-1] = number
-                                combine_flag = True
+                                self.board[i][column] = number
                                 break
 
-        elif userMove == 'S':
-            pass
+
 
 if __name__ == "__main__":  # Use as is
     def promptGamerForTheNextMove() -> str:  # A function used in super-loop
