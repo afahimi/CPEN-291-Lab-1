@@ -50,7 +50,8 @@ class TwentyFortyEight:
         randrow = random.randint(0,3)
         randcolumn = random.randint(0,3)
 
-        while(self.board[randrow][randcolumn] != ""):
+        #generate random cells until one is empty, place two there
+        while self.board[randrow][randcolumn] != "":
             randrow = random.randint(0, 3)
             randcolumn = random.randint(0, 3)
 
@@ -58,11 +59,10 @@ class TwentyFortyEight:
 
     def isFull(self) -> bool:
         """ returns True if no empty cell is left, False otherwise """
-        for i in range(4):
-
-            for j in range(4):
-                if (self.board[i][j] == ""):
-                    return False
+        for i in range(4): #Checks all the rows if
+            for j in range(4): #Checks all the coloumns
+                if self.board[i][j] == "": #checks the location at the specfic column and row to see if it is occupied
+                    return False #if any spot is not occupied it returns false
 
         return True
 
@@ -101,9 +101,9 @@ class TwentyFortyEight:
                             if int(self.board[i][column]) == int(self.board[row][column]) and moved[i]:
                                 j = row + 1
                                 open = True
-                                while (
-                                        j < i):  # checks to see if there are no numbers present between the two we want to combine
-                                    if (self.board[j][column] != ''):
+                                # checks to see if there are no numbers present between the two we want to combine
+                                while j < row:
+                                    if self.board[j][column] != '':
                                         open = False
                                     j += 1
 
@@ -127,8 +127,9 @@ class TwentyFortyEight:
                             if int(self.board[row][i]) == int(self.board[row][column]) and moved[i]:
                                 j = column+1
                                 open = True
-                                while (j < i): #checks to see if there are no numbers present between the two we want to combine
-                                    if (self.board[row][j] != ''):
+                                # checks to see if there are no numbers present between the two we want to combine
+                                while j < column:
+                                    if self.board[row][j] != '':
                                         open = False
                                     j+=1
 
@@ -137,11 +138,6 @@ class TwentyFortyEight:
                                     moved[i] = False
                                     self.board[row][column] = ''
                                     break
-
-
-
-
-
         elif move == 'D':
             a = [3, 2, 1, 0]
             for row in a:

@@ -62,7 +62,6 @@ class TicTacToe:
             and prints the info and the updated self.board
         """
         #Checks for win
-
         taken = []
         computerMove = -1
 
@@ -80,16 +79,11 @@ class TicTacToe:
             for second in range(first, 9):
                 if (found):
                     break
-                if  (taken[first] == 1 and taken[second] == 1 and first != second ):
-
-
-                    if (first % 3 == second % 3):
+                if  (taken[first] == 1 and taken[second] == 1 and first != second ): # finds two distinct computer moves
+                    if (first % 3 == second % 3): # if they are on the same column
                         for i in range(3):
-                            if self.board[3 * i + first % 3] == ' ':
-                                computerMove = 3*i + (first % 3)
-                                print(first)
-                                print (second)
-                                print (taken)
+                            if self.board[3 * i + first % 3] == ' ': # find blank space to play
+                                computerMove = 3*i + (first % 3) # make the move
                                 found = True
                                 break
                     if floor(first/3) == floor(second/3):
@@ -97,31 +91,23 @@ class TicTacToe:
                             if (self.board[3*floor(first/3) + i] == " "):
                                 computerMove = 3*floor(first/3) + i
                                 found = True
-                                print ("bye")
                                 break
 
         if computerMove != -1:
             self.board[computerMove] = "O"
             self.printBoard()
-            print("WIN")
-            return
+            return # make it and return
 
         found = False
         for first in range(9):
-
             for second in range(first, 9):
                 if (found):
                     break
-                if  (taken[first] == 0 and taken[second] == 0 and first != second ):
-
-
-                    if (first % 3 == second % 3):
+                if  (taken[first] == 0 and taken[second] == 0 and first != second ): # finding two distinct oppponent moves
+                    if (first % 3 == second % 3): # if the the moves are in the same column
                         for i in range(3):
-                            if self.board[3 * i + first % 3] == ' ':
-                                computerMove = 3*i + (first % 3)
-                                print(first)
-                                print (second)
-                                print (taken)
+                            if self.board[3 * i + first % 3] == ' ': # find blank space to play
+                                computerMove = 3*i + (first % 3) # make the move
                                 found = True
                                 break
                     if floor(first/3) == floor(second/3):
@@ -129,36 +115,12 @@ class TicTacToe:
                             if (self.board[3*floor(first/3) + i] == " "):
                                 computerMove = 3*floor(first/3) + i
                                 found = True
-                                print ("bye")
                                 break
 
         if computerMove != -1:
             self.board[computerMove] = "O"
             self.printBoard()
-            print("I CANT LOSE!!")
             return
-
-        # #for first in range(9):
-        #     #for second in range(9):
-        #         #if (taken[first] == 0 or taken[second] == 0 or first == second):
-        #             continue
-        #
-        #         if (first % 3 == second % 3):
-        #             for i in range(3):
-        #                 if self.board[3 * i + first % 3] == ' ':
-        #                     computerMove = 3*i + first % 3
-        #         if floor(first/3) == floor(second/3):
-        #             for i in range(3):
-        #                if (3*floor(first/3) + i == " "):
-        #                     computerMove = 3*floor(first/3) + i
-
-
-
-        #if computerMove != -1:
-          # self.board[computerMove] = "O"
-           #self.printBoard()
-            #print("LOSE")
-            #return
 
         computerMove = random.randint(0, 8)
         while (self.board[computerMove] == "O" or self.board[computerMove] == "X"):
