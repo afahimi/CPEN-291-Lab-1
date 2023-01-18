@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="21c4f6e1-f252-4ceb-84ce-ee49e2a39350" name="Changes" comment="tictactoe imprvd" />
+    <list id="bf2305d6-ebf1-4db0-8fca-3eb20a8ccce3" name="Changes by Amraj" comment="Changes by Amraj" />
+    <list id="71731d8b-c48b-4416-853f-88d245beb615" name="Changes by Maria" comment="Changes by Maria">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Lab1_L2A_G16.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1_part1_improved/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_part1_improved/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1part2/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1part2/main.py" afterDir="false" />
+    </list>
+    <list id="33095eff-8744-4ae0-9146-6b49c1b0b2e9" name="Changes by navraj" comment="Changes by navraj">
+      <change beforePath="$PROJECT_DIR$/Lab1_part1_improved/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1_part1_improved/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1part1/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1part1/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab1part2/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1part2/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Lab1part2/main.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/Lab1_part1_improved/main.py">
+      <ranges>
+        <range start1="18" end1="19" start2="18" end2="19" changelist="71731d8b-c48b-4416-853f-88d245beb615" />
+        <range start1="60" end1="62" start2="60" end2="64" changelist="33095eff-8744-4ae0-9146-6b49c1b0b2e9" />
+        <range start1="67" end1="67" start2="69" end2="70" changelist="71731d8b-c48b-4416-853f-88d245beb615" />
+        <range start1="75" end1="75" start2="78" end2="79" changelist="33095eff-8744-4ae0-9146-6b49c1b0b2e9" />
+        <range start1="78" end1="79" start2="82" end2="83" changelist="71731d8b-c48b-4416-853f-88d245beb615" />
+        <range start1="88" end1="89" start2="92" end2="93" changelist="71731d8b-c48b-4416-853f-88d245beb615" />
+        <range start1="90" end1="92" start2="94" end2="96" changelist="71731d8b-c48b-4416-853f-88d245beb615" />
+        <range start1="95" end1="96" start2="99" end2="100" changelist="71731d8b-c48b-4416-853f-88d245beb615" />
+        <range start1="112" end1="113" start2="116" end2="117" changelist="71731d8b-c48b-4416-853f-88d245beb615" />
+        <range start1="119" end1="120" start2="123" end2="124" changelist="71731d8b-c48b-4416-853f-88d245beb615" />
+        <range start1="161" end1="162" start2="165" end2="166" changelist="33095eff-8744-4ae0-9146-6b49c1b0b2e9" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/Lab1part2/main.py">
+      <ranges>
+        <range start1="1" end1="2" start2="1" end2="2" changelist="71731d8b-c48b-4416-853f-88d245beb615" />
+        <range start1="101" end1="102" start2="101" end2="102" changelist="33095eff-8744-4ae0-9146-6b49c1b0b2e9" />
+        <range start1="127" end1="128" start2="127" end2="128" changelist="33095eff-8744-4ae0-9146-6b49c1b0b2e9" />
+        <range start1="141" end1="144" start2="141" end2="145" changelist="33095eff-8744-4ae0-9146-6b49c1b0b2e9" />
+        <range start1="151" end1="155" start2="152" end2="167" changelist="33095eff-8744-4ae0-9146-6b49c1b0b2e9" />
+        <range start1="157" end1="159" start2="169" end2="173" changelist="71731d8b-c48b-4416-853f-88d245beb615" />
+        <range start1="160" end1="170" start2="174" end2="195" changelist="71731d8b-c48b-4416-853f-88d245beb615" />
+      </ranges>
+    </file>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KRFvJpsK6gX3VBQoK6hvDytIxW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/black/Lab1_L2A_G16&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\black\Lab1_L2A_G16\Lab1_part1_improved" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21c4f6e1-f252-4ceb-84ce-ee49e2a39350" name="Changes" comment="" />
+      <created>1673929717367</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673929717367</updated>
+      <workItem from="1673929718373" duration="1359000" />
+      <workItem from="1673999212064" duration="773000" />
+      <workItem from="1674001841927" duration="9719000" />
+    </task>
+    <task id="LOCAL-00001" summary="updated slides">
+      <created>1673931037098</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673931037098</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Working D-slide+combine">
+      <created>1674001937581</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674001937581</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Working Overall">
+      <created>1674006088611</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674006088611</updated>
+    </task>
+    <task id="LOCAL-00004" summary="tictactoe imprvd">
+      <created>1674057717263</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674057717264</updated>
+    </task>
+    <task id="LOCAL-00005" summary="tictactoe imprvd">
+      <created>1674060912713</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674060912713</updated>
+    </task>
+    <task id="LOCAL-00006" summary="tictactoe imprvd">
+      <created>1674061060324</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674061060324</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated slides" />
+    <MESSAGE value="Changes by Maria" />
+    <MESSAGE value="Changes by navraj" />
+    <MESSAGE value="Working Overall" />
+    <MESSAGE value="tictactoe imprvd" />
+    <MESSAGE value="Changes by Amraj" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by Amraj" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Lab1_L2A_G16$main.coverage" NAME="main Coverage Results" MODIFIED="1674061027674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lab1part1" />
+  </component>
+</project>
