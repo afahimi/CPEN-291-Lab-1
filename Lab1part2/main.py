@@ -86,67 +86,59 @@ class TwentyFortyEight:
             directions: W for up; A for left; S for down, and D for right
         """
 
-
         if move == 'W':
-            for column in range(len(self.board)):
-                for row in range(len(self.board)):
-                    if self.board[column][row] == "":
-                        temp = row
-                        for i in range(row + 1, len(self.board)):
-                            if self.board[column][i] != '':
-                                self.board[column][temp] = self.board[row][i]
-                                temp += 1
-                                self.board[column][i] = ''
+            move_order = [0, 1, 2, 3]
+            for column in move_order:
+                moved = [True, True, True, True]
+                for row in move_order:
+                    if self.board[row][column] != '':
+                        for i in range(0, row, +1):
+                            if self.board[i][column] == '':
+                                self.board[i][column] = self.board[row][column]
+                                self.board[row][column] = ''
+                                break
 
-            for column1 in range(len(self.board)):
-                for row1 in range(len(self.board)):
-                    current = self.board[row1][column1]
-                    if self.board[row1][column1] != "":
-                        current = int(self.board[row1][column1])
+                            if int(self.board[i][column]) == int(self.board[row][column]) and moved[i]:
+                                j = row + 1
+                                open = True
+                                while (
+                                        j < i):  # checks to see if there are no numbers present between the two we want to combine
+                                    if (self.board[j][column] != ''):
+                                        open = False
+                                    j += 1
 
-                        if int(current) + 1 < len(self.board) and self.board[row1 + 1][column1] == current:
-                            self.board[row1][column1] = str(int(self.board[row1][column1] * 2))
-                            for i in range(column + 1, len(self.board)):
-                              if i + 1 < len(self.board):
-                                  self.board[i][column1] = self.board[i+1][column1]
-                                  self.board[i+1][column1] = ''
-
-
-
-
-
+                                if open:
+                                    self.board[i][column] = int(self.board[i][column]) * 2
+                                    moved[i] = False
+                                    self.board[row][column] = ''
+                                    break
         elif move == 'A':
-
-            for column in range(4):
-                temp = 0
-                for i in range(1, 4):
-                    if self.board[column][temp] == "":
-                        for j in range (temp+1, 4):
-                            if self.board[column][j] != "":
-                                self.board[column][temp] = self.board[column][j]
-                                self.board[column][j] = ""
+            a = [3, 2, 1, 0]
+            b = [0, 1, 2, 3]
+            for row in a:
+                moved = [True, True, True, True]
+                for column in b:
+                    if self.board[row][column] != '':
+                        for i in range(0, column, +1):
+                            if self.board[row][i] == '':
+                                self.board[row][i] = self.board[row][column]
+                                self.board[row][column] = ''
                                 break
-                    temp +=1
+                            if int(self.board[row][i]) == int(self.board[row][column]) and moved[i]:
+                                j = column+1
+                                open = True
+                                while (j < i): #checks to see if there are no numbers present between the two we want to combine
+                                    if (self.board[row][j] != ''):
+                                        open = False
+                                    j+=1
+
+                                if open:
+                                    self.board[row][i] = int(self.board[row][i]) * 2
+                                    moved[i] = False
+                                    self.board[row][column] = ''
+                                    break
 
 
-            for column in range(4):
-
-                for i in range(1, 4):
-                    temp = i-1
-                    if (self.board[column][temp] == self.board[column][i] and self.board[column][temp] != ''):
-                        self.board[column][temp] = int(self.board[column][temp])*2
-                        self.board[column][i] = ""
-                        i += 1
-            for column in range(4):
-                temp = 0
-                for i in range(1, 4):
-                    if self.board[column][temp] == "":
-                        for j in range(temp + 1, 4):
-                            if self.board[column][j] != "":
-                                self.board[column][temp] = self.board[column][j]
-                                self.board[column][j] = ""
-                                break
-                    temp += 1
 
 
 
