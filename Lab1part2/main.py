@@ -151,28 +151,19 @@ class TwentyFortyEight:
 
 
         elif move == 'D':
-
-            column = 4
-            while column >= 0:
-                column -= 1
-                row = 3
-                while row >= 0:
-                    row -=1
-                    for possible in range(3 , column , -1):
-                        if self.board[row][column] != "":
-                            print(column)
-                            if self.board[row][column] == self.board[row][possible]:
-                                print(possible)
-                                self.board[row][possible] = str(int(self.board[row][possible])*2)
-                                self.board[row][column] = ""
-                                row = 3
-                                column = 3
+            a = [3, 2, 1, 0]
+            for row in a:
+                for column in a:
+                    if self.board[row][column] != '':
+                        for i in range(3, column, -1):
+                            if self.board[row][i] == '':
+                                self.board[row][i] = self.board[row][column]
+                                self.board[row][column] = ''
                                 break
-                            if self.board[row][possible] == "":
-                                self.board[row][possible] = str(int(self.board[row][column]))
-                                self.board[row][column] = ""
-                                row = 3
-                                column = 3
+
+                            if int(self.board[row][i]) == int(self.board[row][column]):
+                                self.board[row][i] = int(self.board[row][i]) * 2
+                                self.board[row][column] = ''
                                 break
 
         elif move == 'S':
