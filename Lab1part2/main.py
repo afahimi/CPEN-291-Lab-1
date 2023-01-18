@@ -64,7 +64,7 @@ class TwentyFortyEight:
                 if self.board[i][j] == "": #checks the location at the specfic column and row to see if it is occupied
                     return False #if any spot is not occupied it returns false
 
-        return True
+        return True #returns true if every spot is full
 
     def getCurrentScore(self) -> int:
         """
@@ -72,11 +72,11 @@ class TwentyFortyEight:
             the score is the sum of all the numbers currently on the board
         """
 
-        score = 0
-        for row in range(len(self.board)):
-            for column in range(len(self.board)):
-                if self.board[row][column] != '':
-                    score += int(self.board[row][column])
+        score = 0 #Always initiliaze the score as 0
+        for row in range(len(self.board)): #Checks rows
+            for column in range(len(self.board)): #checks column
+                if self.board[row][column] != '': #checks if the specific row and column in empty
+                    score += int(self.board[row][column]) # adds the number at the specific location to the score
         return score  # To Implement
 
     def updateTheBoardBasedOnTheUserMove(self, move: str) -> None:
