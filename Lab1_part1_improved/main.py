@@ -58,8 +58,10 @@ class TicTacToe:
         self.printBoard()
 
     def computerNextMove(self) -> None:
-        """ computer randomly chooses a valid cell,
-            and prints the info and the updated self.board
+        """ computer  checks for possible wins. If it can win it does
+         Then the computer checks for possible losses, if it prevent that it will
+         A trick is to win through the diagonals, since the computer is scared of diagonals
+            The computer prints the info and updated self.board
         """
         #Checks for win
         taken = []
@@ -72,6 +74,7 @@ class TicTacToe:
                 taken.append(0)
             else:
                 taken.append(-1)
+
 
         found = False
         for first in range(9):
@@ -159,7 +162,7 @@ class TicTacToe:
         if self.hasWon("X"):
             print("You won! Thanks for playing")
             return True;
-        # finds the opponents character, checks for loss and writes the corresponding end message.
+        #  Checks for loss and writes the corresponding end message.
 
         if self.hasWon("O"):
             print("You Lost! Thanks for playing")

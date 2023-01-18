@@ -93,22 +93,17 @@ class TicTacToe:
                  "You lost! Thanks for playing." or
                  "A draw! Thanks for playing."
         """
-        #Checks for win and writes the corresponding end message.
-        if self.hasWon(who):
+        # Checks for win and writes the corresponding end message.
+        if self.hasWon("X"):
             print("You won! Thanks for playing")
             return True;
-        #finds the opponents character, checks for loss and writes the corresponding end message.
+        #  Checks for loss and writes the corresponding end message.
 
-        if who == "O":
-            opponent = "X"
-        elif who == "X":
-            opponent = "O"
-
-        if self.hasWon(opponent):
+        if self.hasWon("O"):
             print("You Lost! Thanks for playing")
             return False
 
-        #Checks for draw and writes the corresponding end message.
+        # Checks for draw and writes the corresponding end message.
         draw = True;
         for i in range(9):
             if self.board[i] != "X" and self.board[i] != "O":
@@ -118,7 +113,7 @@ class TicTacToe:
             print("A draw! Thanks for playing.")
             return True;
 
-        #Nobody won, so return false.
+        # Nobody won, so return false.
         return False
 
 if __name__ == "__main__":  # Use as is

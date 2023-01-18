@@ -99,7 +99,7 @@ class TwentyFortyEight:
                                 break
 
                             if int(self.board[i][column]) == int(self.board[row][column]) and moved[i]:
-                                j = row + 1
+                                j = i + 1
                                 open = True
                                 # checks to see if there are no numbers present between the two we want to combine
                                 while j < row:
@@ -125,7 +125,7 @@ class TwentyFortyEight:
                                 self.board[row][column] = ''
                                 break
                             if int(self.board[row][i]) == int(self.board[row][column]) and moved[i]:
-                                j = column+1
+                                j = i+1
                                 open = True
                                 # checks to see if there are no numbers present between the two we want to combine
                                 while j < column:
@@ -139,9 +139,10 @@ class TwentyFortyEight:
                                     self.board[row][column] = ''
                                     break
         elif move == 'D':
-            a = [3, 2, 1, 0]
-            for row in a:
-                for column in a:
+            move_order = [3, 2, 1, 0]
+            for row in move_order:
+                moved = [True, True, True, True]
+                for column in move_order:
                     if self.board[row][column] != '':
                         for i in range(3, column, -1):
                             if self.board[row][i] == '':
@@ -149,10 +150,21 @@ class TwentyFortyEight:
                                 self.board[row][column] = ''
                                 break
 
-                            if int(self.board[row][i]) == int(self.board[row][column]):
-                                self.board[row][i] = int(self.board[row][i]) * 2
-                                self.board[row][column] = ''
-                                break
+                            if int(self.board[row][i]) == int(self.board[row][column]) and moved[i]:
+                                j = column+1
+                                open = True
+
+                                # checks to see if there are no numbers present between the two we want to combine
+                                while j < i:
+                                    if self.board[row][j] != '':
+                                        open = False
+                                    j+=1
+
+                                if open:
+                                    self.board[row][i] = int(self.board[row][i]) * 2
+                                    moved[i] = False
+                                    self.board[row][column] = ''
+                                    break
 
         elif move == 'S':
             for column in range(len(self.board)):
