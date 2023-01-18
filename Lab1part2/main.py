@@ -1,5 +1,5 @@
 # group number: G16
-# student names: Navraj Bains, Amraj Aujla, Greg Berezhnov
+# student names: Navraj Bains, Amraj Aujla, Greg Berezhnov, Amin Fahiminia
 
 import random, sys
 
